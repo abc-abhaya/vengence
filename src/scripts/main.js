@@ -1,15 +1,14 @@
-import myImage from '../assets/it-department.png';
+import IT_CLUB_LOGO from '../assets/it-club-logo.png';
 import setFavicon from './favicon';
+import headerOnScroll from './effect/headerOnScroll';
+import typeWriter from './effect/typeWriter';
 
 const { log } = console;
 log('Namaste Nepal');
 
-const div = document.createElement('div');
-const h1 = document.createElement('h1');
-h1.innerText = `Hey there! Let's start coding...`;
-const img = document.createElement('img');
-img.src = myImage;
+setFavicon(IT_CLUB_LOGO, 'png');
 
-div.append(h1, img);
-document.body.appendChild(div);
-setFavicon(myImage, 'png');
+document.addEventListener('DOMContentLoaded', (event) => {
+	typeWriter();
+	headerOnScroll();
+});

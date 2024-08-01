@@ -1,0 +1,55 @@
+/* The wavy effect */
+/* Don't touch the code below */
+/* This was generated form shape divider app */
+
+main > .welcome {
+	width: 100%;
+	height: calc(100vh - 80px);
+	position: relative;
+	background-color: #123abc;
+	padding-left: 3rem;
+	padding-top: 3rem;
+}
+
+.custom-shape-divider-bottom-1722525828 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1722525828 svg {
+	position: relative;
+	display: block;
+	width: calc(146% + 1.3px);
+	height: 150px;
+}
+
+.custom-shape-divider-bottom-1722525828 .shape-fill {
+	fill: #fff;
+}
+/* You may change the code below */
+
+/* Actual styling */
+
+main .welcome {
+	color: white;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+p.motto {
+	font-size: 1rem;
+}
