@@ -374,6 +374,10 @@ nav > ul {
 	box-sizing: border-box;
 }
 
+body {
+	background-color: #eff2fa;
+}
+
 header {
 	background-color: #123abc;
 	position: sticky;
@@ -392,12 +396,6 @@ ul.horizontal-nav {
 .nav-item:first-child {
 	margin-right: auto;
 }
-
-/* .nav-item {
-	font-family: 'ubuntu', sans-serif;
-    font-family: 'DM Sans', sans-serif;
-	font-family: 'Roboto', sans-serif;
-    } */
 
 .nav-item > button {
 	--color: white;
@@ -425,7 +423,7 @@ ul.horizontal-nav {
 	content: '';
 	width: 100%;
 	height: 3px;
-	background-color: var(--color);
+	background-color: white;
 	border-radius: 3px;
 	position: absolute;
 	bottom: 0;
@@ -437,7 +435,7 @@ ul.horizontal-nav {
 		0 0 30px #00ffff;
 }
 
-.nav-item:not(:first-child):hover > button::after {
+.nav-item:hover > button::after {
 	transform: scale(1, 1);
 	transition: transform 200ms ease-in-out;
 }
@@ -452,33 +450,66 @@ header.onscroll {
 
 main > .welcome {
 	width: 100%;
-	height: calc(100vh - 80px);
+	height: calc(100vh - 200px);
 	position: relative;
 	background-color: #123abc;
 	padding-left: 3rem;
 	padding-top: 3rem;
+	user-select: none;
 }
 
-.custom-shape-divider-bottom-1722525828 {
+.wavediv {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	height: 500px;
 	overflow: hidden;
 	line-height: 0;
-	transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1722525828 svg {
-	position: relative;
-	display: block;
-	width: calc(146% + 1.3px);
-	height: 150px;
+.waves {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20vh;
+	min-height: 100px;
+	max-height: 150px;
 }
 
-.custom-shape-divider-bottom-1722525828 .shape-fill {
-	fill: #fff;
+.parallax > use {
+	animation: moveWaves 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
+
+.parallax > use:nth-child(1) {
+	animation-delay: -2s;
+	animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+	animation-delay: -3s;
+	animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+	animation-delay: -4s;
+	animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+	animation-delay: -5s;
+	animation-duration: 15s;
+}
+
+@keyframes moveWaves {
+	0% {
+		transform: translate3d(-90px, 0, 0);
+	}
+	100% {
+		transform: translate3d(85px, 0, 0);
+	}
+}
+
 /* You may change the code below */
 
 /* Actual styling */
@@ -496,6 +527,7 @@ main .welcome {
 
 h1 {
 	font-size: 4rem;
+	line-height: 1.1;
 }
 
 p.motto {
